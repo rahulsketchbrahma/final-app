@@ -15,7 +15,7 @@ const Banner = ({fetchRandom }) => {
         fetchData();
 
     },[]);
-    console.log(movie);
+    console.log('app',movie);
     return (
     
     <div className="banner"

@@ -6,7 +6,7 @@ const request = {
     fetchDiscoverShows:`${baseURL}/discover/tv?api_key=${API_KEY}&with_networks=213`,
     fetchTopRated:`${baseURL}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
     fetchPopularMovies:`${baseURL}/movie/popular?api_key=${API_KEY}&language=en-US`,
-    fetchActionMovies:`${baseURL}/discover/movie?api_key=${API_KEY}&with_genres=28`,
+    fetchActionMovies:`${baseURL}/discover/movie?api_key=${API_KEY}&wih_tgenres=28`,
     fetchComedyMovies:`${baseURL}/discover/movie?api_key=${API_KEY}&with_genres=35`,
     fetchHorrorMovies:`${baseURL}/discover/movie?api_key=${API_KEY}&with_genres=27`,
     fetchRomanceMovies:`${baseURL}/discover/movie?api_key=${API_KEY}&with_genres=10749`,
