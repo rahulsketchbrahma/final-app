@@ -6,7 +6,7 @@ import Banner from './Banner';
 function App() {
   return (
     <div className="app">
-      <Banner fetchRandom={request.fetchTrending} />
+      <Banner fetchRandom={request.fetchActionMovies} />
         <Row title="TRENDING NOW" fetchUrl={request.fetchTrending} />
         <Row title="TRENDING TV SHOWS" fetchUrl={request.fetchDiscoverShows} />
         <Row title="TOP RATED" fetchUrl={request.fetchTopRated} />

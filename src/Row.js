@@ -1,6 +1,7 @@
 import axios from "axios";
 import React,{useState, useEffect} from "react";
 import './Row.css'
+import YouTube from "react-youtube";
 
 const img_url = "https://image.tmdb.org/t/p/original/";
 
@@ -15,7 +16,15 @@ const Row = ({ title , fetchUrl }) =>{
         }
         fetchData();
 
-    }, []);
+    }, [fetchUrl]);
+
+    const opts = {
+        height:"390",
+        width: "100%",
+        playerVars: {
+            autoplay:1,
+        },
+    };
 
     return(
         <div className="row">
@@ -30,6 +39,7 @@ const Row = ({ title , fetchUrl }) =>{
             ))}
             
         </div>
+      
         </div>
     )
 
