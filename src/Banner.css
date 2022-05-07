@@ -11,13 +11,11 @@
 .banner_title{
     font-size: 3rem;
     font-weight: 800;
-    padding-bottom: 0.3rem;
     color: white;
 }
 .banner_description{
     width: 59rem;
     color: white;
-    padding-top: 0.8rem;
     height: 80px;
     line-height: 1.3;
     font-size: 1rem;

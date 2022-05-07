@@ -3,6 +3,7 @@
 }
 .row h1{
     margin-left: 16px;
+    color: white;
 }
 .row_container{
     display: flex;
