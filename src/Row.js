@@ -4,6 +4,7 @@ import axios from 'axios';
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer'
 
+
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title , fetchUrl}) {
@@ -54,10 +55,8 @@ function Row({ title , fetchUrl}) {
                 className="row_poster"
                 src={`${baseUrl}${movie.poster_path}`}
                 alt={movie.name} 
-                
                 />
               ))}
-
             </div>
             {trailerUrl && <YouTube
              videoId={trailerUrl}  

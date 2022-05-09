@@ -1,25 +1,21 @@
 import './App.css';
-import Banner from './Banner';
-import Row from './Row';
-import requests from './request';
-
+import Home from './Home';
+import FrontPage from './FrontPage';
+import Warning from './Warning';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="app">
-      
-      <Banner fetchRandom={requests.fetchTrending} />
-      <Row title="Trending now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
-
-     
+    <Routes>
+  <Route path="/" element={<FrontPage />} />
+  <Route path="/Home" element={<Home />} />
+  <Route path="/Warning" element={<Warning />} />
+</Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
