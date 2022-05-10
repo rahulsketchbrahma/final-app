@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Row.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
@@ -20,16 +21,25 @@ function Row({ title , fetchUrl}) {
         <div className="row" >
             <h1>{title}</h1>
 
-            <div className="row_container" >
+            <div className="row_container">
 
-              {movies?.map(movie =>(
+              {movies?.map((movie, id) =>(
+                <>
                 <img 
-                key={movie.id}
+                key={id}
                 className="row_poster"
                 src={`${baseUrl}${movie.poster_path}`}
-                alt={movie.name} 
-                />
+                alt={movie.name}
+                /> 
+                <div className='Overlay'>
+                  <div className='Content'>
+                  <Link to={`/Moviedetails/${movie.id}`}><button type="text">View More</button></Link>
+                  </div>    
+                </div>
+     
+                </>
               ))}
+            
             </div>
         </div>
     )
