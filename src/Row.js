@@ -22,7 +22,6 @@ function Row({ title , fetchUrl}) {
             <h1>{title}</h1>
 
             <div className="row_container">
-
               {movies?.map((movie, id) =>(
                 <>
                 <img 
@@ -33,7 +32,7 @@ function Row({ title , fetchUrl}) {
                 /> 
                 <div className='Overlay'>
                   <div className='Content'>
-                  <Link to={`/Moviedetails/${movie.id}`}><button type="text">View More</button></Link>
+                  <Link to={`/Moviedetails/${movie.id}`}><button type="text" className='row-button'>View More</button></Link>
                   </div>    
                 </div>
      

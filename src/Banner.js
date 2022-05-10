@@ -33,10 +33,6 @@ const Banner = ({fetchRandom}) => {
         
         {/* title */}
         <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
-        {/* button */}
-        <div className="banner_buttons">
-            <button className="banner_button">View More</button>
-        </div>
          {/* desciption */}
         <p className="banner_description">{movie.overview}</p>
         </div>
