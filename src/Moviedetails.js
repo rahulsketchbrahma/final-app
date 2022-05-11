@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import './Moviedetails.css'
+import Videos from './Videos';
+import { Link } from 'react-router-dom';
 
 const url ='https://api.themoviedb.org/3';
 
@@ -26,6 +28,7 @@ function Moviedetails() {
           <div className='navbar'>
           <Navbar/>
           </div>
+          <Videos/>
           <div className='movie-data'>
             <div className='movie-content'>
             <div className='movie-background'>
@@ -38,18 +41,19 @@ function Moviedetails() {
           <div className='movie-description'>
           <h3 className='tagline'>{moviess.tagline}</h3>  
           <h1 className='movie-title'>{moviess.original_title}</h1>
-          <p>{moviess.overview}</p>   
+          <p className='movie-overview'>{moviess.overview}</p>   
           <div className='movie-details'>
-          <h4>Popularity - {moviess.popularity}</h4> 
+          <h4>Popularity - {moviess.popularity}</h4>
+          <h4>Voting - {moviess.vote_average}</h4>  
           <h4>Release Date - {moviess.release_date}</h4> 
-          <h4>Voting - {moviess.vote_average}</h4> 
           <h4>Revenue - {moviess.revenue}</h4>
           </div>
+          <Link to='/Home'><button className='Movie-deatailes-button'>Back</button></Link>
           </div>
-            </div>
           </div>
-    
-              </>
+          </div>
+         
+          </>
              
         
     )
