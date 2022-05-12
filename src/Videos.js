@@ -9,7 +9,7 @@ const url ='https://api.themoviedb.org/3';
 
 function Videos() {
     const[videos ,setVideos] = useState([]);
-    const {id} = useParams();
+    const {id} = useParams()
 
     useEffect(()=>{
         async function fecthVideo(){
@@ -20,13 +20,19 @@ function Videos() {
         }
         fecthVideo()
     },[])
+    
+    const opts = {
+      height: '300',
+      width: '340',
+    }
+    
 
   return (
       <>
       <div className='trailer-wrapper'> 
       <YouTube
       videoId={videos.key}
-      className='trailer'
+      opts={opts}
       />
       </div>
     </>
