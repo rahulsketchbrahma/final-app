@@ -11,4 +11,18 @@
     width: 300px;
     height: 10px;
 }
-
+.trailer{
+    height: 370px;
+    box-shadow: 1px 1px 65px rgb(57, 56, 56);
+    margin: 30px;
+    padding: 20px;
+    
+    
+}
+.trailer-wrapper{
+    height: 70vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}

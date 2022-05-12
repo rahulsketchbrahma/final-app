@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios";
 import './Banner.css'
+import {Link} from 'react-router-dom'
 
 
 const Banner = ({fetchRandom}) => {
@@ -33,6 +34,7 @@ const Banner = ({fetchRandom}) => {
         
         {/* title */}
         <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
+        <Link to={`/Moviedetails/${movie.id}`}><button type="text" className='banner_button'>View More</button></Link>
          {/* desciption */}
         <p className="banner_description">{movie.overview}</p>
         </div>

@@ -28,7 +28,7 @@ function Moviedetails() {
           <div className='navbar'>
           <Navbar/>
           </div>
-          <Videos/>
+  
           <div className='movie-data'>
             <div className='movie-content'>
             <div className='movie-background'>
@@ -52,7 +52,7 @@ function Moviedetails() {
           </div>
           </div>
           </div>
-         
+          <Videos/>
           </>
              
         
